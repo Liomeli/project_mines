@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block field %}
+<div id = 'main_middle'>
+	<h5 align="center"><em>Режим игры: продвинутый<em></h5>
+		<form id = 'menu_form'>
+			{% for em in M %}
+			<input class = 'little-button' id = '{{ em }}' type="button" style="top : {{em[1]}}; left : {{em[0]}}">
+			{% endfor %}
+		</form>
+	</div>
+{% endblock %}

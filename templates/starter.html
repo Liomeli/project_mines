@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{% block field %}
+<div id = 'main_starter'>
+	<h5 align="center"><em>Режим игры: новичок<em></h5>
+		{% for em in M %}
+		<input class = 'little-button' id = '{{ em[2] }}' type="button" style="top : {{em[1]}}; left : {{em[0]}}">
+		{% endfor %}
+	</div>
+{% endblock %}

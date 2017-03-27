@@ -18,16 +18,16 @@
 	</head>
 	<body>
 		
-		<<div class="parent" >
-			<div class = 'main'>
+		<div class="parent" >
+		{% block field %}
+			<div id = 'main'>
 				<h4 align="center"><em>Выберите режим игры:<em></h4>
-				<form class = 'menu_form'>
-					<input id = 'starter' type="button" name="starter" value = '{% block value_1%}1{%endblock%}'>
-					<input id = 'middle' type="button" name="middle" value = '{% block value_2%}1{%endblock%}'>
-					<input id = 'expert' type="button" name="expert" value = '{% block value_3%}1{%endblock%}'>
-					<input id = 'custom' type="button" name="custom" value = '{% block value_4%}1{%endblock%}'>
-				</form>
+					<input id = 'starter' type="button" name="starter" value = '{% block value_1%}1{%endblock%}' onclick = "location.href='/starter'">
+					<input id = 'middle' type="button" name="middle" value = '{% block value_2%}1{%endblock%}' onclick="location.href='/middle'">
+					<input id = 'expert' type="button" name="expert" value = '{% block value_3%}1{%endblock%}' onclick="location.href='/expert'">
+					<input id = 'custom' type="button" name="custom" value = '{% block value_4%}1{%endblock%}' onclick="location.href='/custom'">
 			</div>
+		{% endblock %}
 		</div>
 
 
